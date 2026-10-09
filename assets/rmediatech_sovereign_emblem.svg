@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- ============================================================================== -->
+  <!-- RMediaTech LLC Sovereign Insignia: "The Aegis-Keystone Monolith"                -->
+  <!-- The Classical Synthesis: Greek (Aegis), Roman (Janus Gate), Egyptian (Pyramid)  -->
+  <!-- ============================================================================== -->
+  <defs>
+    <style>
+      .sovereign-contour {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 14;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .sovereign-core {
+        fill: currentColor;
+      }
+      .sovereign-accent {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 10;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(0, 0)">
+    <!-- 1. The Greek Aegis Shield Outer Contour -->
+    <path class="sovereign-contour" d="
+      M 256, 36
+      L 384, 112
+      L 416, 260
+      L 348, 388
+      L 256, 476
+      L 164, 388
+      L 96, 260
+      L 128, 112
+      Z
+    " />
+
+    <!-- 2. The Egyptian Pyramid Apex of Thoth -->
+    <polygon class="sovereign-contour" points="
+      256, 76
+      336, 176
+      176, 176
+    " />
+
+    <!-- Central Focal Eye of Horus / Cryptographic Core -->
+    <circle class="sovereign-core" cx="256" cy="142" r="14" />
+
+    <!-- 3. The Roman Janus Twin Gateway Pillars -->
+    <!-- Left Pillar -->
+    <path class="sovereign-accent" d="
+      M 216, 186
+      L 216, 416
+      M 186, 220
+      L 186, 370
+    " />
+
+    <!-- Right Pillar -->
+    <path class="sovereign-accent" d="
+      M 296, 186
+      L 296, 416
+      M 326, 220
+      L 326, 370
+    " />
+
+    <!-- Central Threshold Baseline -->
+    <line class="sovereign-accent" x1="216" y1="416" x2="296" y2="416" />
+
+    <!-- Keystone Chevron Inscription -->
+    <path class="sovereign-accent" d="
+      M 216, 260
+      L 256, 290
+      L 296, 260
+    " />
+    <path class="sovereign-accent" d="
+      M 216, 320
+      L 256, 350
+      L 296, 320
+    " />
+  </g>
+</svg>
