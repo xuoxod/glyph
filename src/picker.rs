@@ -160,8 +160,13 @@ impl InteractivePicker {
                 Print(" ")
             )?;
 
-            // Print Shortcode
-            let code_str = format!("{:<16}", format!(":{}", entry.shortcode));
+            // Print Shortcode (guarantee at least 1 space gap and clean column)
+            let formatted_code = format!(":{}", entry.shortcode);
+            let code_str = if formatted_code.len() > 18 {
+                format!("{:18} ", &formatted_code[..18])
+            } else {
+                format!("{:<18} ", formatted_code)
+            };
             if is_sel {
                 queue!(
                     out,
