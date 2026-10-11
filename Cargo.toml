@@ -2,7 +2,7 @@
 name = "glyph"
 version = "0.1.0"
 edition = "2021"
-authors = ["Rick Walker <xuoxod@gmail.com>"]
+authors = ["Rick Walker <rick@rmediatech.com>"]
 description = "Sovereign, ultra-fast emoji & symbol engine on demand for consoles, SSH sessions, and scripts"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/xuoxod/glyph"
