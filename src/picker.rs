@@ -3,7 +3,6 @@
 // Ultra-Fast Zero-Lag Fuzzy TUI Picker with Raw Mode RAII Guard
 // ==============================================================================
 
-use std::io::{self, stdout, Write};
 use crossterm::{
     cursor,
     event::{self, Event, KeyCode, KeyEvent, KeyModifiers},
@@ -11,6 +10,7 @@ use crossterm::{
     style::{Color, Print, ResetColor, SetForegroundColor},
     terminal::{self, Clear, ClearType},
 };
+use std::io::{self, stdout, Write};
 use unicode_width::UnicodeWidthStr;
 
 use crate::catalog::{Catalog, EmojiEntry};
@@ -62,7 +62,10 @@ impl InteractivePicker {
 
             Self::render(&query, &matches, selected_idx)?;
 
-            if let Event::Key(KeyEvent { code, modifiers, .. }) = event::read()? {
+            if let Event::Key(KeyEvent {
+                code, modifiers, ..
+            }) = event::read()?
+            {
                 match code {
                     KeyCode::Esc => return Ok(None),
                     KeyCode::Char('c') if modifiers.contains(KeyModifiers::CONTROL) => {
@@ -93,11 +96,7 @@ impl InteractivePicker {
         }
     }
 
-    fn render(
-        query: &str,
-        matches: &[&'static EmojiEntry],
-        selected: usize,
-    ) -> io::Result<()> {
+    fn render(query: &str, matches: &[&'static EmojiEntry], selected: usize) -> io::Result<()> {
         let mut out = stdout();
         queue!(out, cursor::MoveTo(0, 0), Clear(ClearType::FromCursorDown))?;
 
@@ -154,11 +153,7 @@ impl InteractivePicker {
             }
 
             // Print Glyph
-            queue!(
-                out,
-                Print(entry.glyph),
-                Print(" ")
-            )?;
+            queue!(out, Print(entry.glyph), Print(" "))?;
 
             // Print Shortcode (guarantee at least 1 space gap and clean column)
             let formatted_code = format!(":{}", entry.shortcode);

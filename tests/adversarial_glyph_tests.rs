@@ -41,7 +41,10 @@ fn test_threat_2_ansi_and_log_poisoning_defense() {
     // Malicious ANSI CSI escape injection intended to rebind keys or hide terminal text
     let poisoned_input = "\x1b[31;1m\x1b[2Jshield\x1b[0m";
     let cleaned = sanitize_input(poisoned_input);
-    assert!(!cleaned.contains('\x1b'), "Escape character leaked into sanitized string");
+    assert!(
+        !cleaned.contains('\x1b'),
+        "Escape character leaked into sanitized string"
+    );
     assert_eq!(cleaned, "shield");
 
     // OSC sequence injection
@@ -85,8 +88,20 @@ fn test_threat_4_corrupted_boundary_ingestion() {
     assert!(res.is_none(), "Traversal payload should resolve to nothing");
 
     // Incomplete shortcode strings
-    assert_eq!(Interpolator::process("Incomplete :fire"), "Incomplete :fire");
-    assert_eq!(Interpolator::process("Dangling colon :"), "Dangling colon :");
-    assert_eq!(Interpolator::process("Double colons ::"), "Double colons ::");
-    assert_eq!(Interpolator::process("Spaces in colons :hello world:"), "Spaces in colons :hello world:");
+    assert_eq!(
+        Interpolator::process("Incomplete :fire"),
+        "Incomplete :fire"
+    );
+    assert_eq!(
+        Interpolator::process("Dangling colon :"),
+        "Dangling colon :"
+    );
+    assert_eq!(
+        Interpolator::process("Double colons ::"),
+        "Double colons ::"
+    );
+    assert_eq!(
+        Interpolator::process("Spaces in colons :hello world:"),
+        "Spaces in colons :hello world:"
+    );
 }

@@ -70,11 +70,7 @@ fn test_parity_ascii_emoticons() {
 
     for (emoticon, expected) in emoticon_cases {
         let entry = LookupEngine::resolve(emoticon);
-        assert!(
-            entry.is_some(),
-            "Emoticon '{}' failed resolution",
-            emoticon
-        );
+        assert!(entry.is_some(), "Emoticon '{}' failed resolution", emoticon);
         assert_eq!(
             entry.unwrap().glyph,
             expected,

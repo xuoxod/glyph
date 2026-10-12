@@ -721,7 +721,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["bot", "ai", "machine", "android", "droid"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Gestures & Hands
     // -------------------------------------------------------------------------
@@ -954,7 +953,14 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "folded hands",
         shortcode: "pray",
         category: Category::Gestures,
-        tags: &["please", "thank you", "thanks", "gratitude", "namaste", "bless"],
+        tags: &[
+            "please",
+            "thank you",
+            "thanks",
+            "gratitude",
+            "namaste",
+            "bless",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -973,7 +979,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["strong", "power", "flex", "workout", "fitness", "tough"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // People & Identity
     // -------------------------------------------------------------------------
@@ -1054,7 +1059,15 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "man technologist",
         shortcode: "developer",
         category: Category::People,
-        tags: &["coder", "programmer", "hacker", "engineer", "dev", "tech", "software"],
+        tags: &[
+            "coder",
+            "programmer",
+            "hacker",
+            "engineer",
+            "dev",
+            "tech",
+            "software",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -1070,7 +1083,14 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "detective",
         shortcode: "detective",
         category: Category::People,
-        tags: &["investigator", "spy", "sleuth", "sherlock", "agent", "recon"],
+        tags: &[
+            "investigator",
+            "spy",
+            "sleuth",
+            "sherlock",
+            "agent",
+            "recon",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -1273,7 +1293,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["breath", "air", "respiration"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Animals & Fauna
     // -------------------------------------------------------------------------
@@ -1509,7 +1528,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["dinosaur", "jurassic", "tyrannosaurus", "fossil"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Nature & Weather
     // -------------------------------------------------------------------------
@@ -1697,7 +1715,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["eruption", "lava", "mountain", "magma"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Food & Drink
     // -------------------------------------------------------------------------
@@ -1941,7 +1958,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["meat", "beef", "bbq", "grill"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Travel & Places
     // -------------------------------------------------------------------------
@@ -2177,7 +2193,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["peak", "nature", "climb", "summit"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Activities & Sports
     // -------------------------------------------------------------------------
@@ -2381,7 +2396,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["art", "paint", "draw", "color", "creative"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Objects, Tools & Tech
     // -------------------------------------------------------------------------
@@ -2390,7 +2404,15 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "shield",
         shortcode: "shield",
         category: Category::Objects,
-        tags: &["defense", "protect", "sovereign", "security", "guard", "armor", "firewall"],
+        tags: &[
+            "defense",
+            "protect",
+            "sovereign",
+            "security",
+            "guard",
+            "armor",
+            "firewall",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -2398,7 +2420,14 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "light bulb",
         shortcode: "idea",
         category: Category::Objects,
-        tags: &["bulb", "light", "thought", "inspiration", "brainstorm", "eureka"],
+        tags: &[
+            "bulb",
+            "light",
+            "thought",
+            "inspiration",
+            "brainstorm",
+            "eureka",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -2454,7 +2483,9 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "package",
         shortcode: "package",
         category: Category::Objects,
-        tags: &["box", "crate", "parcel", "cargo", "delivery", "shipping", "binary"],
+        tags: &[
+            "box", "crate", "parcel", "cargo", "delivery", "shipping", "binary",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -2769,7 +2800,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["battle", "fight", "combat", "war"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Symbols & Indicators
     // -------------------------------------------------------------------------
@@ -2778,7 +2808,9 @@ pub static CATALOG: &[EmojiEntry] = &[
         name: "check mark button",
         shortcode: "check",
         category: Category::Symbols,
-        tags: &["done", "pass", "ok", "success", "yes", "correct", "verified"],
+        tags: &[
+            "done", "pass", "ok", "success", "yes", "correct", "verified",
+        ],
         emoticons: &[],
     },
     EmojiEntry {
@@ -3093,7 +3125,6 @@ pub static CATALOG: &[EmojiEntry] = &[
         tags: &["details", "help", "notice", "about"],
         emoticons: &[],
     },
-
     // -------------------------------------------------------------------------
     // Flags
     // -------------------------------------------------------------------------

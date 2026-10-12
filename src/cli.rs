@@ -170,10 +170,16 @@ impl Cli {
                     if !suggestions.is_empty() {
                         eprintln!("No exact match for '{}'. Did you mean:", query);
                         for res in suggestions.iter().take(5) {
-                            eprintln!("  {}  :{:<16} - {}", res.entry.glyph, res.entry.shortcode, res.entry.name);
+                            eprintln!(
+                                "  {}  :{:<16} - {}",
+                                res.entry.glyph, res.entry.shortcode, res.entry.name
+                            );
                         }
                     } else {
-                        eprintln!("No glyph found matching '{}'. Try 'em find <keyword>'", query);
+                        eprintln!(
+                            "No glyph found matching '{}'. Try 'em find <keyword>'",
+                            query
+                        );
                     }
                 }
             }

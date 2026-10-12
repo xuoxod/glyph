@@ -96,7 +96,11 @@ impl LookupEngine {
                 score = score.max(95);
             } else if entry.shortcode.starts_with(stripped) {
                 score = score.max(75);
-            } else if entry.shortcode.split('_').any(|w| w.eq_ignore_ascii_case(stripped)) {
+            } else if entry
+                .shortcode
+                .split('_')
+                .any(|w| w.eq_ignore_ascii_case(stripped))
+            {
                 score = score.max(70);
             } else if entry.shortcode.contains(stripped) {
                 score = score.max(25);
@@ -108,7 +112,10 @@ impl LookupEngine {
                     score = score.max(90);
                 } else if tag.starts_with(stripped) {
                     score = score.max(65);
-                } else if tag.split_whitespace().any(|w| w.eq_ignore_ascii_case(stripped)) {
+                } else if tag
+                    .split_whitespace()
+                    .any(|w| w.eq_ignore_ascii_case(stripped))
+                {
                     score = score.max(60);
                 } else if tag.contains(stripped) {
                     score = score.max(20);
@@ -118,7 +125,11 @@ impl LookupEngine {
             // Check full name
             if entry.name.eq_ignore_ascii_case(stripped) {
                 score = score.max(85);
-            } else if entry.name.split_whitespace().any(|w| w.eq_ignore_ascii_case(stripped)) {
+            } else if entry
+                .name
+                .split_whitespace()
+                .any(|w| w.eq_ignore_ascii_case(stripped))
+            {
                 score = score.max(80);
             } else if entry.name.contains(stripped) {
                 score = score.max(20);

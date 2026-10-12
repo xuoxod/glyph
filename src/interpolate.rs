@@ -73,7 +73,10 @@ impl Interpolator {
             // Check if this exact word is an emoticon (like ":-)", ";)", "<3")
             if let Some(entry) = LookupEngine::resolve(word) {
                 // Only replace if the matched entry actually listed this exact word in its emoticons
-                let is_emoticon = entry.emoticons.iter().any(|&e| e.eq_ignore_ascii_case(word));
+                let is_emoticon = entry
+                    .emoticons
+                    .iter()
+                    .any(|&e| e.eq_ignore_ascii_case(word));
                 if is_emoticon {
                     words.push(entry.glyph.to_string());
                 } else {
