@@ -11,9 +11,14 @@
        /___/
 ```
 
-[![CI](https://github.com/xuoxod/glyph/actions/workflows/ci.yml/badge.svg)](https://github.com/xuoxod/glyph/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org)
+<p align="center">
+  <a href="https://github.com/xuoxod/glyph/actions/workflows/ci.yml"><img src="https://github.com/xuoxod/glyph/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <img src="https://img.shields.io/badge/Language-Pure%20Rust%202021-orange.svg" alt="Pure Rust" />
+  <img src="https://img.shields.io/badge/TDD%20Tests-9%2F9%20Passed-brightgreen.svg" alt="Tests" />
+  <img src="https://img.shields.io/badge/Binary%20Size-%3C%20600%20KB-blue.svg" alt="Binary Size" />
+  <a href="https://github.com/xuoxod/glyph/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Release-v0.1.0-green.svg" alt="Release" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blueviolet.svg" alt="License" /></a>
+</p>
 
 ---
 
